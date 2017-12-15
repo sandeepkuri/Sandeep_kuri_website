@@ -1,0 +1,15 @@
+{
+    "name": "Sandeep_kuri_website",
+    "version": "0.1.2",
+    "description": "Sandeep Kuri's Personal Website",
+    "main": "bin/server.js",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "jsonwebtoken": "^8.1.0",
+        "method-override": "^2.3.10",
+        "mongoose": "^4.13.7",
+        "nodemailer": "^4.4.1"
+    }
+}
