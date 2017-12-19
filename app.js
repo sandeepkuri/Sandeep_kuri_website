@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 //Routes begin
 
 var index = require('./routes');
-var about = require('./routes/about');
+//var about = require('./routes/about');
 var api = require('./routes/api');
 var mailer = require('./routes/mailer');
 var logger =require('./middleware/logger');
@@ -19,8 +19,8 @@ var jwtroute = require('./routes/jwttest');
 
 
 app.use('./', index);
-app.use('./about', about);
-app.use('./api' api);
+//app.use('./about', about);
+app.use('./api', api);
 app.use('./mailer', mailer);
 app.use('./jwt', jwtroute);
 
