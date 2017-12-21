@@ -1,11 +1,4 @@
 {
     "name": "Sandeep_kuri_website",
-    "description": "Sandeep Kuri's Personal Website",
-    "main": "bin/server.js",
-    "authors": [
-    "Sandeep Kuri"
-  ],
-    "license": "MIT",
-
-
+    "dependencies": {}
 }
