@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
 
-//------------------------Database Connection------------------//
+/*----------------------------------------------------*/
+/* Database Connection
+------------------------------------------------------ */
 
 var uristring = 'mongodb://demouser:123abc@ds161446.mlab.com:61446/sandeep_kuri_website';
 
@@ -23,7 +25,9 @@ mongoose.connect(uristring, function (err, res) {
     }
 });
 
-//-------------------------Database Schema---------------------//
+/*----------------------------------------------------*/
+/* Database Schema
+------------------------------------------------------ */
 
 var Schema = mongoose.Schema;
 
@@ -34,7 +38,9 @@ var emailschema = new Schema({
 var Email = mongoose.model('Email', emailschema);
 
 
-//-------------------------Route & mailer----------------------//
+/*----------------------------------------------------*/
+/* Route & Mailer
+------------------------------------------------------ */
 
 var myemail = 'sandeep.kuri.ca@gmail.com'
 
@@ -43,7 +49,7 @@ var transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
         user: 'sandeep.kuri.ca@gmail.com', // Your email id
-        pass: 'mahla001' // Your password
+        pass: '*******' // Your password
     }
 });
 //var transporter = nodemailer.createTransport("SMTP", {
@@ -59,8 +65,8 @@ app.post('/subscribe', function (req, res, next) {
     var mailInfoReceiver = {
         from: myemail,
         to: req.body.email,
-        subject: 'Welcome to Myworld',
-        html: '<h1>Thank you</h1>'
+        subject: 'Welcome to Sandeep.kuri.ca',
+        html: '<p><h2>Thank you for Subscription!</h2></p><p>We will notifiy you as soon as the site is ready!!</p><p>Regards</p><p>Sandeep Kuri</p>'
     };
     var maildatabase = new Email({
         email: mailInfoReceiver.to
@@ -91,8 +97,10 @@ app.post('/subscribe', function (req, res, next) {
     });
 });
 
+/*----------------------------------------------------*/
+/* Error Page Routing
+------------------------------------------------------ */
 
-//------------------------Error Page Routing------------------//
 
 app.use(function (request, response, next) {
     var URL = request.protocol + '://' + request.get('host') + request.originalUrl;
@@ -102,7 +110,10 @@ app.use(function (request, response, next) {
     next();
 })
 
-//------------------------Connection-------------------------//
+/*----------------------------------------------------*/
+/* Connection
+------------------------------------------------------ */
+
 
 app.set('port', (process.env.PORT || 5000));
 
