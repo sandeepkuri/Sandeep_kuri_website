@@ -2,7 +2,7 @@
   "name": "Sandeep_kuri_website",
   "version": "0.1.2",
   "description": "Sandeep Kuri's Personal Website",
-  "main": "bin/server.js",
+  "main": "csp.js",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
