@@ -5,12 +5,17 @@
     <!---Coming soon page --Basic Needs 
     ===================================================== -->
     <meta charset="utf-8">
-    <title>Welcome to Sandeep Kuri's Site</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Welcome | Sandeep Kuri</title>
+    <meta name="description" content="blockchain blog site and about myself ">
+    <meta name="author" content="Sandeep Kuri">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!--- CSS
     ===================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="/public/css/comingsoonpage.css" />
 
     <!--- Script
@@ -23,50 +28,55 @@
 <body>
     <!-- Header
    ================================================== -->
-    <header id="home">
-
-
+    <header>
         <!-- end #nav-wrap -->
-
-        <div class="row banner">
-            <div class="banner-text">
+        <div class="container">
+            <div class="comming-soon">
                 <h1 class="responsive-headline">Coming Soon</h1>
                 <h3><span>The is offical Website About myself and a Blockchain blog site. the site in under constraction right now! will be up very soon </span></h3>
-
-                <h2>Get in Touch</h2>
-
-                <div>
-                    <label for="contactEmail"><span class="required"></span></label>
-                    <input type="text" placeholder="Enter Email" value="" size="35" id="contactEmail" name="contactEmail">
-                    <button onclick="submit">Subscribe</button>
-                </div>
-
-                <ul class="social">
-                    <li><a href="https://www.facebook.com/sandeepkuri002"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/sandeep-kuri"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/sandeep__kuri/"><i class="fa fa-instagram"></i></a></li>
-                    <!--<li><a href="---"><i class="fa fa-skype"></i></a></li> -->
-                </ul>
             </div>
         </div>
-
-
     </header>
-    <div class="twelve columns">
-        <ul class="copyright">
-            <li>&copy; Copyright 2017 Sandeep Kuri</li>
-            <!--    <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li> -->
-        </ul>
-    </div>
+
+    <section id="newletter">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form>
+                <label for="contactEmail"><span class="required"></span></label>
+                <input id ="useremail"type="email" placeholder="Enter Email" size="35" id="contactEmail" name="contactEmail">
+                <button onclick="submit()" class="button">Subscribe</button>
+            </form>
+            <!-- contact-warning -->
+              <div id="message-warning"> Error boy</div>
+                <!-- contact-success -->
+                <div id="message-success">
+                    <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+                </div>
+            
+        </div>
+    </section>
+
+    <section class="social">
+       <div class="container">
+            <ul class="social-link">
+                <li><a href="https://www.facebook.com/sandeepkuri002"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sandeep-kuri"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/sandeep__kuri/"><i class="fa fa-instagram"></i></a></li>
+                <!--<li><a href="---"><i class="fa fa-skype"></i></a></li> -->
+            </ul>
+        </div>
+    </section>
+
     <!---footer 
 ============================================= -->
+
     <footer>
-
-
+        <p>&copy; Copyright 2017 Sandeep Kuri</p>
     </footer>
 
+
     <!--- JavaScript
-    ====================================================== -->
+====================================================== -->
     <script src="/public/js/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/public/js/comingsoonjs.js"></script>
@@ -75,6 +85,8 @@
 
 </body>
 <script>
+
+
 </script>
 
 </html>
