@@ -11,12 +11,12 @@
 
 ===================================================================== */
 
+
 /* ------------------------------------------------------------------ */
+
 
 /* a. General Styles
 /* ------------------------------------------------------------------ */
-
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -29,13 +29,15 @@ body {
     -webkit-background-size: cover !important;
     text-align: center;
     overflow: hidden;
-  
 }
 
+
 /* ------------------------------------------------------------------ */
+
 
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
+
 
 /*Global*/
 
@@ -46,15 +48,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-
 }
+
 
 /* vertically center banner section */
 
 header {
-    
     padding-top: 200px;
-
 }
 
 header .comming-soon {
@@ -83,7 +83,6 @@ header .comming-soon h3 {
     letter-spacing: -2px;
     margin: 67px auto 30px auto;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
-
 }
 
 #newletter input[type="email"] {
@@ -97,7 +96,6 @@ header .comming-soon h3 {
     font: 'librebaskerville-regular', serif;
     letter-spacing: 1px;
     color: #0D0D0D;
-    background: ;
     border: none;
     cursor: pointer;
     height: 27px;
@@ -105,52 +103,61 @@ header .comming-soon h3 {
     border-radius: 3px;
     background: none;
     border-style: solid;
-
 }
-#newletter form{
+
+#newletter form {
     margin-left: 60px;
 }
 
-#message-warning, #message-success {
-   display: none;
-	background: #0F0F0F;
-	padding: 24px 24px;
-	margin-bottom: 36px;
-   width: 65%;
-   margin-left: 26%;
+#message-warning,
+#message-success {
+    display: none;
+    background: #0F0F0F;
+    padding: 24px 24px;
+    margin-bottom: 36px;
+    width: 65%;
+    margin-left: 26%;
 }
-#message-warning { color: #D72828; }
-#message-success { color: #11ABB0; }
+
+#message-warning {
+    color: #D72828;
+}
+
+#message-success {
+    color: #11ABB0;
+}
 
 #message-warning i,
 #message-success i {
-   margin-right: 10px;
+    margin-right: 10px;
 }
-
-
 
 .social-link {
     position: relative;
     margin: 24px 0;
-   padding: 0;
-   font-size: 30px;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    padding: 0;
+    font-size: 30px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
 
-.social-link li{
+.social-link li {
     display: inline-block;
-   margin: 0 15px;
-   padding: 0;
-    
+    margin: 0 15px;
+    padding: 0;
 }
-.social-link li a { color: black; }
-.social-link li a:hover { color: orange; }
+
+.social-link li a {
+    color: black;
+}
+
+.social-link li a:hover {
+    color: orange;
+}
+
 footer {
-  
-   position: absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /* Height of the footer */
 }

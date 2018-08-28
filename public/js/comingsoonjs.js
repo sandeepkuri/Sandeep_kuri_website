@@ -6,11 +6,9 @@
 /*
 -----------------------------------------------------------------------------------*/
 
- jQuery(document).ready(function($) {
+
 
   function submit(){
-
-      $('#image-loader').fadeIn();
 
       var emailaddress = document.getElementById("useremail").value;
 
@@ -38,7 +36,6 @@
    }
 
 
-});
 
 
 
