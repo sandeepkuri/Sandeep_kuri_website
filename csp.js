@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 
 var uristring = 'mongodb://demouser:123abc@ds161446.mlab.com:61446/sandeep_kuri_website';
 
-mongoose.connect(uristring, function (err, res) {
+mongoose.connect(uristring, function(err, res) {
 
     if (err) {
         console.log('ERROR connecting to:' + uristring + '--' + err);
@@ -42,14 +42,14 @@ var Email = mongoose.model('Email', emailschema);
 /* Route & Mailer
 ------------------------------------------------------ */
 
-var myemail = 'sandeep.kuri.ca@gmail.com'
+var myemail = 'sandeep.kuri.ca@gmail.com';
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     host: "smtp.gmail.com",
     auth: {
         user: 'sandeep.kuri.ca@gmail.com', // Your email id
-        pass: '*******' // Your password
+        pass: 'sandeep001' // Your password
     }
 });
 //var transporter = nodemailer.createTransport("SMTP", {
@@ -60,7 +60,7 @@ var transporter = nodemailer.createTransport({
 //    }
 //});
 
-app.post('/subscribe', function (req, res, next) {
+app.post('/subscribe', function(req, res, next) {
     var useremail = req.body.email;
     var mailInfoReceiver = {
         from: myemail,
@@ -74,7 +74,7 @@ app.post('/subscribe', function (req, res, next) {
     });
 
 
-    transporter.sendMail(mailInfoReceiver, function (error, response) {
+    transporter.sendMail(mailInfoReceiver, function(error, response) {
         if (error) {
             console.log(error);
             res.send("error");
@@ -86,7 +86,7 @@ app.post('/subscribe', function (req, res, next) {
 
     });
 
-    maildatabase.save(function (err, mailObj) {
+    maildatabase.save(function(err, mailObj) {
 
         if (err) {
             console.log(err);
@@ -102,13 +102,13 @@ app.post('/subscribe', function (req, res, next) {
 ------------------------------------------------------ */
 
 
-app.use(function (request, response, next) {
+app.use(function(request, response, next) {
     var URL = request.protocol + '://' + request.get('host') + request.originalUrl;
     var err = new Error('Page Not Found');
     err.status = 404;
-    console.log('Page Not Found. URL : ' + URL + '\n' + err)
+    console.log('Page Not Found. URL : ' + URL + '\n' + err);
     next();
-})
+});
 
 /*----------------------------------------------------*/
 /* Connection
@@ -117,7 +117,7 @@ app.use(function (request, response, next) {
 
 app.set('port', (process.env.PORT || 5000));
 
-app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
 
