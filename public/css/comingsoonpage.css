@@ -24,7 +24,7 @@
                                                 background-size: cover !important;
                                                 -webkit-background-size: cover !important;
                                                 text-align: center;
-                                                overflow: hidden;
+                                                overflow: scroll;
                                             }
                                             /* ------------------------------------------------------------------ */
                                             /* b. Header Styles
@@ -135,7 +135,7 @@
                                             }
                                             
                                             .social-link li a {
-                                                color: black;
+                                                color: rgb(253, 253, 253);
                                             }
                                             
                                             .social-link li a:hover {
@@ -143,7 +143,8 @@
                                             }
                                             
                                             footer {
-                                                position: absolute;
+                                                color: aliceblue;
+                                                position: relative;
                                                 bottom: 0;
                                                 width: 100%;
                                                 height: 60px;
