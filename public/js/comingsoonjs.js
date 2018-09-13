@@ -7,34 +7,21 @@
 
 
 $(document).ready(function() {
-    window.onload = function() {
-        console.log("i'm loading");
-    };
+    window.onload = function() {};
     $("#id_submit").click(function() {
-        var emailaddress = document.getElementById("useremail").value;
+        var emailaddress = $('#useremail').val();
         // alert(emailaddress);
-        console.log(emailaddress);
-        var settings = {
-            "async": false,
-            "crossDomain": true,
-            "url": "http://localhost:5000/subscribe",
-            "method": "POST",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                "cache-control": "no-cache",
-                "Access-Control-Allow-Origin": '*'
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:5000/subscribe",
+            data: {
+                "email": emailaddress,
             },
-            "data": {
-                "email": emailaddress
-            }
-        };
-        $.ajax(settings).done(function(response) {
-            console.log(response);
-            if (response == "send") {
-                alert("You have successfully done it ");
-            } else {
-                alert(" logged in and a Token has been issued to you");
+            success: function(msg) {
+                console.log(msg);
+
             }
         });
+
     });
 });
