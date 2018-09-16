@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
+var path = require('path');
 var app = express();
 
 app.use(bodyParser.json()); //to support JSON-encoded bodies
@@ -9,6 +10,11 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
 
+var index = require('./routes');
+// app.use('/', index);
+
+app.use("/public",express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, '/view/pages')))
 /*----------------------------------------------------*/
 /* Database Connection
 ------------------------------------------------------ */

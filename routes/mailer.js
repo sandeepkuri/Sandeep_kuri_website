@@ -16,6 +16,9 @@ var emailschema = new Schema({
     subject: String,
     message: String
 });
+
+console.log(database,"here");
+
 var Email = database.model('Email', emailschema );
 
 var transporter = nodemailer.createTransport("SMTP", {
