@@ -1,19 +1,27 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <!---Coming soon page --Basic Needs 
     ===================================================== -->
     <meta charset="utf-8">
-    <title>Welcome to Sandeep Kuri's Site</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Welcome | Sandeep Kuri</title>
+    <meta name="description" content="blockchain blog site and about myself ">
+    <meta name="author" content="Sandeep Kuri">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!--- CSS
     ===================================================== -->
-    <link rel="stylesheet" type="text/css" href="/Sandeep_kuri_website/public/css/comingsoonpage.css" />
+    <link rel="stylesheet" type="text/css" href="/Users/sandeepkuri/NodeJS/Sandeep_kuri_website/public/css/comingsoonpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!--- Script
+    <!--- JavaScript
     ====================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/Users/sandeepkuri/NodeJS/Sandeep_kuri_website/public/js/comingsoonjs.js"></script>
+
 
 
 
@@ -22,106 +30,55 @@
 <body>
     <!-- Header
    ================================================== -->
-    <header id="home">
-
-
+    <header>
         <!-- end #nav-wrap -->
-
-        <div class="row banner">
-            <div class="banner-text">
+        <div class="container">
+            <div class="comming-soon">
                 <h1 class="responsive-headline">Coming Soon</h1>
                 <h3><span>The is offical Website About myself and a Blockchain blog site. the site in under constraction right now! will be up very soon </span></h3>
-                <hr />
-                <ul class="social">
-                    <li><a href="https://www.facebook.com/GgAMbBiTt"><i class="fa fa-facebook"></i></a></li>
-                    <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
-                    <li><a href="https://in.linkedin.com/in/durlabhsharma"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/hannibal_holmes/"><i class="fa fa-instagram"></i></a></li>
-                    <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                    <li><a href="skype:sharma.durlabh?chat"><i class="fa fa-skype"></i></a></li>
-                </ul>
             </div>
         </div>
-
-        <p class="scrolldown">
-            <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-        </p>
-
     </header>
-    <!-- Header End -->
 
+    <section id="newletter">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form>
+                <label for="contactEmail"><span class="required"></span></label>
+                <input id="useremail" type="email" placeholder="Enter Email" size="35">
+                <button id="id_submit" onClick="submit()">Subscribe</button>
+            </form>
 
-    <!-- Contact Section
-   ================================================== -->
-    <section id="contact">
-
-        <div class="row section-head">
-
-            <div class="two columns header-col">
-
-                <h1><span>Keep in touch.</span></h1>
-
-            </div>
-
-
-        </div>
-
-        <div class="row">
-
-            <div class="eight columns">
-
-                <!-- form -->
-                <form action="hello" method="post" id="contactForm" name="contactForm">
-                    <fieldset>
-
-                        <div>
-                            <label for="contactName">Name <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactName" name="contactName">
-                        </div>
-
-                        <div>
-                            <label for="contactEmail">Email <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                        </div>
-
-                        <div>
-                            <button class="submit">Subscribe</button>
-                            <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                        </div>
-
-                    </fieldset>
-                </form>
-                <!-- Form End -->
-
-                <!-- contact-warning -->
-                <div id="message-warning"> Error boy</div>
-                <!-- contact-success -->
-                <div id="message-success">
-                    <i class="fa fa-check"></i>Subscribed!<br>
-                </div>
-
+            <!-- contact-warning -->
+            <div id="message-warning"> Error boy</div>
+            <!-- contact-success -->
+            <div id="message-success">
+                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
             </div>
 
         </div>
-
     </section>
-    <!-- Contact Section End-->
 
+    <section class="social">
+        <div class="cont ainer">
+            <ul class="social-link">
+                <li><a href="https://www.facebook.com/sandeepkuri002"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sandeep-kuri"><i class="fa fa-linkedin"></i></a></li>
 
+                <!--<li><a href="---"><i class="fa fa-skype"></i></a></li> -->
+            </ul>
+        </div>
+    </section>
 
-    <!--- JavaScript
-    ====================================================== -->
-    <script src="/public/js/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/public/js/comingsoonjs.js"></script>
+    <!---footer 
+============================================= -->
 
+    <footer>
+        <p>&copy; Copyright 2017 Sandeep Kuri</p>
+    </footer>
 
 
 </body>
-<script>
-</script>
+
 
 </html>

@@ -14,7 +14,7 @@ var index = require('./routes');
 //var about = require('./routes/about');
 var api = require('./routes/api');
 var mailer = require('./routes/mailer');
-var logger =require('./middleware/logger');
+var logger = require('./middleware/logger');
 var jwtroute = require('./routes/jwttest');
 
 
@@ -32,11 +32,11 @@ app.use('./jwt', jwtroute);
 
 //Error Page Routing 
 
-app.use(function(request, response, next){
+app.use(function(request, response, next) {
     var URL = request.protocol + '://' + request.get('host') + request.originalUrl;
     var err = new Error('Page Not Found');
-    err.status=404;
-    logger.error('Page Not Found. URL : '+ URL+'\n'+err)
+    err.status = 404;
+    logger.error('Page Not Found. URL : ' + URL + '\n' + err);
     next();
-})
+});
 module.exports = app;
