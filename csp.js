@@ -2,13 +2,18 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
+var path = require('path');
 var app = express();
 
 app.use(bodyParser.json()); //to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
+var index = require('./routes');
+// app.use('/', index);
 
+app.use("/public",express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/view/pages')));
 /*----------------------------------------------------*/
 /* Database Connection
 ------------------------------------------------------ */
@@ -74,17 +79,17 @@ app.post('/subscribe', function(req, res, next) {
     });
 
 
-    transporter.sendMail(mailInfoReceiver, function(error, response) {
-        if (error) {
-            console.log(error);
-            res.send("error");
-        } else {
-            console.log("Message send to: " + useremail);
-            res.send("send");
-
-        }
-
-    });
+    // transporter.sendMail(mailInfoReceiver, function(error, response) {
+    //     if (error) {
+    //         console.log(error);
+    //         res.send("error");
+    //     } else {
+    //         console.log("Message send to: " + useremail);
+    //         res.send("send");
+    //
+    //     }
+    //
+    // });
 
     maildatabase.save(function(err, mailObj) {
 
@@ -93,6 +98,17 @@ app.post('/subscribe', function(req, res, next) {
 
         } else {
             console.log('Saved successfully in Database: ', mailObj);
+            transporter.sendMail(mailInfoReceiver, function(error, response) {
+                if (error) {
+                    console.log(error);
+                    res.json({msg:"error"});
+                } else {
+                    console.log("Message send to: " + useremail);
+                    res.send({msg:"send"});
+
+                }
+
+            });
         }
     });
 });

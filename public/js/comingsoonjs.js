@@ -8,31 +8,29 @@
 
 $(document).ready(function() {
 
-    $("#contactForm").submit(function(e) {
-        debugger;
-        e.preventDefault(); // Prevents the page from refreshing
-        var $this = $(this); // `this` refers to the current form element
-        var emailaddress = document.getElementById("useremail").value;
-        $.ajax({
-
-          type: "POST",
-          url: "http://localhost:5000/subscribe",
-          data: {"email": emailaddress},
-          success: function(msg) {
-
-              // Message was sent
-              if (msg == 'OK') {
-                 alert("ok");
-              }
-              // There was an error
-              else {
-            alert("not ok");
-              }
-
-          }
-
-        });
-    });
+    // $("#contactForm").submit(function(e) {
+    //     debugger;
+    //     e.preventDefault(); // Prevents the page from refreshing
+    //     var $this = $(this); // `this` refers to the current form element
+    //     var emailaddress = document.getElementById("useremail").value;
+    //     $.ajax({
+    //
+    //       type: "POST",
+    //       url: "http://localhost:5000/subscribe",
+    //       data: {"email": emailaddress},
+    //       success: function(data) {
+    //
+    //           // Message was sent
+    //           console.log(data);
+    //           if (data.msg == "send") {
+    //               alert("email sent");
+    //           } else {
+    //               alert(data);
+    //           }
+    //       }
+    //
+    //     });
+    // });
 
 
     $("#id_submit").click(function(e) {
@@ -48,14 +46,15 @@ $(document).ready(function() {
             },
             success: function(data) {
                 console.log(data);
-                if (data == "send") {
+                if (data.msg == "send") {
                     alert("email sent");
                 } else {
                     alert(data);
                 }
-            }
+            },
+            dataType: "json"
         });
-        return false;
+        // return false;
     });
 
 });
