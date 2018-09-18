@@ -7,27 +7,28 @@
 
 
 $(document).ready(function() {
-    window.onload = function() {};
-    $("#id_submit").click(function() {
+
+    $("#id_submit").click(function(e) {
+        e.preventDefault();
         var emailaddress = $('#useremail').val();
         console.log(emailaddress);
         // alert(emailaddress);
         $.ajax({
-            async: "true",
             type: "POST",
             url: "http://localhost:5000/subscribe",
             data: {
                 "email": emailaddress,
             },
-            success: function(msg) {
-
-                if (msg == "OK") {
+            success: function(data) {
+                console.log(data);
+                if (data == "send") {
                     alert("email sent");
                 } else {
-                    alert(msg);
+                    alert(data);
                 }
             }
         });
-
+        return false;
     });
+
 });

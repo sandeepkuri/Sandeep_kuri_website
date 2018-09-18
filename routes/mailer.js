@@ -6,7 +6,7 @@ var database = require('../middleware/database');
 
 var router = express.Router();
 
-var to = 'sandeep.kuri.ca@gmail.com'
+var to = 'sandeep.kuri.ca@gmail.com';
 
 var Schema = mongoose.Schema;
 
@@ -16,7 +16,7 @@ var emailschema = new Schema({
     subject: String,
     message: String
 });
-var Email = database.model('Email', emailschema );
+var Email = database.model('Email', emailschema);
 
 var transporter = nodemailer.createTransport("SMTP", {
     service: "Mailgun",
@@ -26,14 +26,14 @@ var transporter = nodemailer.createTransport("SMTP", {
     }
 });
 
-router.post('/send', function (req, res, next) {
+router.post('/send', function(req, res, next) {
 
     var mailInfoReceiver = {
         name: req.body.name,
         from: req.body.from,
         subject: req.body.subject,
         message: req.body.message
-    }
+    };
 
     var maildatabase = new Email({
         name: mailInfoReceiver.name,
@@ -44,7 +44,7 @@ router.post('/send', function (req, res, next) {
 
     console.log("Mailer Object" + maildatabase);
 
-    transporter.sendMail(mailInfoReceiver, function (error, response) {
+    transporter.sendMail(mailInfoReceiver, function(error, response) {
         if (error) {
             console.log(error);
             res.send("error");
@@ -56,7 +56,7 @@ router.post('/send', function (req, res, next) {
 
     });
 
-    mail.save(function (err, mailObj) {
+    mail.save(function(err, mailObj) {
 
         if (err) {
             console.log(err);

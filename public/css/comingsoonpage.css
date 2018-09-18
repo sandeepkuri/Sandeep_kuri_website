@@ -20,7 +20,7 @@
                                                 margin: auto;
                                                 height: 100%;
                                                 width: 100%;
-                                                background: url("/Users/sandeepkuri/NodeJS/Sandeep_kuri_website/public/images/background.jpg") no-repeat top center;
+                                                background: url("/public/images/background.jpg") no-repeat top center;
                                                 background-size: cover !important;
                                                 -webkit-background-size: cover !important;
                                                 text-align: center;
