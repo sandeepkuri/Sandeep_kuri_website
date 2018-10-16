@@ -1,16 +1,20 @@
 {
-  "name": "Sandeep_kuri_website",
-  "version": "0.1.2",
-  "description": "Sandeep Kuri's Personal Website",
-  "main": "csp.js",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "jsonwebtoken": "^8.1.0",
-    "method-override": "^2.3.10",
-    "mongoose": "^4.13.7",
-    "nodemailer": "^4.4.1",
-    "winston": "^2.4.0"
-  }
+    "name": "Sandeep_kuri_website",
+    "version": "0.1.2",
+    "description": "Sandeep Kuri's Personal Website",
+    "main": "csp.js",
+    "scripts": {
+        "start": "node csp.js",
+        "postinstall": "bower cache clean && bower install"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "jsonwebtoken": "^8.1.0",
+        "method-override": "^2.3.10",
+        "mongoose": "^4.13.7",
+        "nodemailer": "^4.4.1",
+        "winston": "^2.4.0"
+    }
 }
