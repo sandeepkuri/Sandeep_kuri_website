@@ -4,8 +4,7 @@
     "description": "Sandeep Kuri's Personal Website",
     "main": "csp.js",
     "scripts": {
-        "start": "node csp.js",
-        "postinstall": "bower cache clean && bower install"
+        "start": "node csp.js"
     },
     "license": "MIT",
     "dependencies": {
