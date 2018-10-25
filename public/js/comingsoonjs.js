@@ -7,7 +7,6 @@
 
 
 $(document).ready(function() {
-
     $("#id_submit").click(function(e) {
         e.preventDefault();
         var emailaddress = $('#useremail').val();
@@ -21,14 +20,15 @@ $(document).ready(function() {
             },
             success: function(data) {
                 console.log(data);
-                if (data == "send") {
+                if (data.msg == "send") {
                     alert("email sent");
                 } else {
                     alert(data);
                 }
-            }
+            },
+            dataType: "json"
         });
-        return false;
+        // return false;
     });
 
 });
